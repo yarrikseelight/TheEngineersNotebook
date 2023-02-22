@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_url%}{% static 'blogapp/about.css' %}{% endblock css_url%}
+{% block nav_css %}{% static 'nav.css' %}{% endblock nav_css %}
+
+{% block page_title %}About{% endblock page_title %}
+
+{% block content %}
+{% include "nav.html" %}
+
+<div class="main">
+    <div class="textbox">
+        <h2>About</h2>
+        <hr>
+        <div id="cont">
+            <div id="article">
+                <p class="text">Welcome to my blog! My name is Jere Seilo and as of January 2023, I'm a first-year software engineering student at LUT University. I'm excited to share my first project with you: a blog built with Django, the popular Python web framework.</p>
+                <p class="text">After completing an online course on Udemy that taught me the basics of Django, I'm eager to apply my new skills to real-world projects. This blog is my first attempt at building something from scratch using Django before moving forward to learn Django REST framework. </p>
+                <p class="text">I would also like to highlight that I'm a noob in front-end development. I focused mainly on the back-end and "django stuff" and I didn't use any front-end frameworks for this project. However, I still used a bit of time to make the blog responsive and user-friendly. By no means is it perfect but I will keep learning new stuff to make my future projects even better! I'm always open to any feedback on how to improve my projects.</p>
+            </div>
+            <img id="pp" src={% static "blogapp/django.jpg" %}>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

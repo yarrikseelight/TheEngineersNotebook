@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_url%}{% static 'blogapp/postdetail.css' %}{% endblock css_url%}
+{% block nav_css %}{% static 'nav.css' %}{% endblock nav_css %}
+
+{% block page_title %}{{post.title}}{% endblock page_title %}
+
+{% block content %}
+{% include "nav.html" %}
+
+<div class="main">
+    <div class="textbox">
+        <h2>{{post.title}}</h2>
+        <div class="written">
+            <img id="pp" src={{post.author.profilepic.url}}>
+            <p>{{post.author}}</p>
+            <p>{{post.date}}</p>
+            <p id="views">{{post.views}} views</p>
+       </div>
+        <hr>
+        <p id="text">{{post.text |linebreaksbr}}</p>
+        <section>
+            <div class="comments">
+                <h1>Comments</h1>
+                <div class="new_comment">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{form.comment}} 
+                    </form>
+                    
+
+                    <!--Jos ei
+                    <h4><a href="">Log in</a> to comment...</h4>
+                    LOPPU-->
+                </div>
+
+                <!--FOR I IN COMMENTS-->
+                <div class="comment">
+                    <div class="written" id="comment_writer">
+                        <img id="pp" src={% static 'blogapp/django.jpg' %}>
+                        <p>{{post.author}}</p>
+                        <p  id="pvm">{{post.date}}</p>
+                    </div>
+                <p class="comment_text">What a shitty text bro!</p>
+                </div>
+                <!--ENDFOR-->
+
+                <div class="comment">
+                    <div class="written" id="comment_writer">
+                        <img id="pp" src={% static 'blogapp/django.jpg' %}>
+                        <p>{{post.author}}</p>
+                        <p id="pvm">{{post.date}}</p>
+                    </div>
+                <p class="comment_text">Itse en tykännyt kyseisen tekstin sisällöstä vaikka aihe olikin sinäänsä mielenkiintoinen.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock content %}

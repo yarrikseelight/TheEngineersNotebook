@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_url%}{% static 'blogapp/posts.css' %}{% endblock css_url%}
+{% block nav_css %}{% static 'nav.css' %}{% endblock nav_css %}
+
+{% block page_title %}All Posts{% endblock page_title %}
+
+{% block content %}
+
+{% include "nav.html" %}
+<div class="main">  
+    {% for post in posts %}
+    <a href="{% url 'postdetail' post.slug %}">
+    <div class="smallpost">
+        <div class="imagediv"><img class="im" src={{post.image.url}}></div>
+       <h3>{{post.title}}</h3>
+       <p>{{post.intro}}</p> 
+    </a>
+       <p class="views">{{post.views}} Views</p>
+       <div class="written">
+            <img id="pp" src={{post.author.profilepic.url}}>
+            <p>{{post.author}}</p>
+            <p>{{post.date}}</p>
+       </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

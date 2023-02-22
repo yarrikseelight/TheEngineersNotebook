@@ -1,0 +1,14 @@
+{% load static %}
+<nav>
+    <div class="logo">
+      <a href={% url 'frontpage' %}><img src={% static 'logo.jpg' %}></a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="{%url "frontpage"%}">Home</a></li>
+        <li><a href="{% url "posts" %}">Posts</a></li>
+        <li><a href="{% url "about" %}">About</a></li>
+      </ul>
+    <label class="login">
+      <a href="{% url 'login' %}"><button type="button">Login</button></a>
+    </label>
+  </nav>

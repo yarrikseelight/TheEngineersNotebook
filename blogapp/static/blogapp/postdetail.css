@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap');
+
+
+@media (max-width:850px) {
+      .textbox h2 {
+        font-size: 2.3rem !important;
+      }
+
+      .text {
+        font-size: 1rem !important;
+      }
+
+      .textbox {
+        width: 92vw !important;
+       } 
+
+       .comments {
+        width: 80vw !important;
+       }
+       
+       
+  }
+
+  @media (max-width:1000px) {
+    .textbox {
+      width: 87vw !important;
+    
+     }
+
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+ .main {
+  height: 90vh;
+  width: 100vw;
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  overflow:auto !important;
+ }
+
+ .textbox {
+  margin-top: 70px;
+  height: 700px;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .written {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  top: 0px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.written p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+#pp {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.textbox h2 {
+  color: #fff;
+  margin-top:25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#text {
+  margin: 20px;
+  margin-top: 40px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  padding-bottom: 40px;
+}
+
+hr {
+  margin-top: 10px;
+  width: 70%;
+  color: #1d1d1d;
+}
+
+#views{
+  font-weight: 200;
+}
+
+
+.comments {
+padding-top: 30px;
+padding-bottom: 25px;
+font-family: 'Inter', sans-serif;
+width: 50vw;
+font-weight: 300;
+color: whitesmoke;
+display: flex;
+flex-direction: column;
+align-items: start;
+}
+
+.comments h1 {
+  margin-bottom: 30px;
+}
+
+#comment_writer{
+  justify-content: start !important;
+  margin-left: 15px;
+}
+
+.comment {
+  background-color: rgb(54, 54, 54);
+  width: 100%;
+  margin: 3px;
+}
+
+.comment_text {
+  margin: 15px;
+}
+
+#pvm {
+  font-weight: 200;
+}
+
+.new_comment {
+  height: 60px;
+  width: 100%;
+}
+
+.commentbox {
+  height: 40px;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+h4 {
+  font-weight: 300;
+  padding-left: 3px;
+} 
+
+h4 a {
+  text-decoration: underline;
+  color: whitesmoke;
+}
+
+
+
+
