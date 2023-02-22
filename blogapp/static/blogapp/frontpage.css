@@ -3,8 +3,19 @@
 
 @media (max-width:850px) {
       .banner h3{
-        margin-bottom: 20px !important;
+        font-size: 26px !important;
       }
+
+      .banner h1{
+        padding-top: 80px !important;
+        font-size: 35px !important;
+      }
+
+      .banner {
+        padding: 80px !important;
+    
+      }
+
 
 }
 
@@ -60,6 +71,7 @@
     font-size: 1.3rem;
     letter-spacing: 1px;
     margin-bottom: 15px;
+  
   }
 
   .smallpost p {
@@ -117,7 +129,7 @@
   .banner h3 {
     font-size: 2rem;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
 
   .views {
