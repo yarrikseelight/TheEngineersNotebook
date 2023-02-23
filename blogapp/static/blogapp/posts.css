@@ -21,6 +21,11 @@
     margin: 0;
     padding: 0;
   }
+
+body {
+  background-color: #1d1d1d;
+  height: 100vh;
+}
   
   .main {
     height: 90vh;
@@ -29,8 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    overflow: auto;  
+    justify-content: center;  
     padding-top: 50px;
   }
 

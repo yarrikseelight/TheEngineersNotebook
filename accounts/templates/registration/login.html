@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_title %}Blog - Login{% endblock page_title %}
-{% block css_url %}{% static 'loginapp/login.css' %}{% endblock css_url %}
+{% block css_url %}{% static 'accounts/login.css' %}{% endblock css_url %}
 {% block nav_css %}{% static 'nav.css' %}{% endblock nav_css %}
 
 {% block content %}
@@ -11,18 +11,21 @@
     <form method="POST">
         {% csrf_token %}
         <h3>Login</h3>
-        <label for="email" class="label" id="label1">Email:</label>
-            <input type="text" placeholder="Email Address" id="username">
+        <label for="email" class="label" id="label1">Username:</label>
+            <input type="text" placeholder="Username" id="username" name="username">     
         <label for="password" class="label" id="label2">Password:</label>
-            <input type="password" placeholder="Password" id="password">
+            <input type="password" placeholder="Password" id="password" name="password">
             <label for"checkbox"  class="label" id="remember"><input type="checkbox" class="rememberpw" name="checkbox">Remember me</label>
+           {% if form.errors %}
+           <p id="incorrect_login">Incorrect username or password. Please try again.</p>
+           {% endif %}
         <button class="login_button" type="submit">LOGIN</button>
         <div id="or">
         <hr>
         <p class="or">OR</p>
         <hr>
         </div>
-        <a href="loginapp/register.html" class="register_button">REGISTER</a>
+        <a href={% url 'register' %} class="register_button">REGISTER</a>
     </form>
 </div>
 </div>

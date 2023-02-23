@@ -7,8 +7,13 @@
         <li><a href="{%url "frontpage"%}">Home</a></li>
         <li><a href="{% url "posts" %}">Posts</a></li>
         <li><a href="{% url "about" %}">About</a></li>
-      </ul>
+    </ul>
     <label class="login">
+      {% if user.is_authenticated %}
+      <p>Logged in as:  {{user.username}}</p>
+      <a href="{% url 'logout' %}"><button type="button">Log Out</button></a>
+      {% else %}
       <a href="{% url 'login' %}"><button type="button">Login</button></a>
+      {% endif %}
     </label>
   </nav>

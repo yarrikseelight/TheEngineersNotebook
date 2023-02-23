@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}Blog - Login{% endblock page_title %}
+{% block css_url %}{% static 'accounts/login.css' %}{% endblock css_url %}
+{% block nav_css %}{% static 'nav.css' %}{% endblock nav_css %}
+
+
+
+{% block content %}
+{% include "nav.html" %}
+
+
+<div id="formdiv">
+    <form method="POST" action={% url 'register' %}>
+        {% csrf_token %}
+        <h3>Register</h3>
+        <label for="email" class="label" id="label1">Username:</label>
+            <input type="text" placeholder="Username" id="username" name="username">
+            {{form.username.errors}}
+        <label for="password" class="label" id="label2">Password:</label>
+            <input type="password" placeholder="Password" id="password" name="password1">
+            {{form.password1.errors}}
+        <label for="password" class="label" id="label2">Password (again):</label>
+            <input type="password" placeholder="Password (again)" id="password" name="password2">
+            {{form.password2.errors}}
+        <button class="login_button" type="submit" style="margin-bottom: 20px; margin-top:20px;">SIGN UP</button>      
+    </form>
+</div>
+</div>
+{% endblock content %}

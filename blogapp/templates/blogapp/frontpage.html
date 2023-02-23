@@ -10,8 +10,13 @@
 
 {% include "nav.html" %}
 <div class="banner">
+    {% if user.is_authenticated %}
+    <h1>Hello {{user.username.capitalize}}, Welcome to My Blog!</h1>
+    <h3>Latest Posts</h3>
+    {% else %} 
     <h1>Hello World, Welcome to My Blog!</h1>
     <h3>Latest Posts</h3>
+    {% endif %}
 </div>
 <div class="main">  
     {% for post in posts %}
