@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils.text import slugify
 from datetime import date
+from django.contrib.auth.models import User
+from django.db import models
+
 
 # Create your models here.
 
@@ -28,3 +31,14 @@ class Author(models.Model):
 
     def __str__(self):
         return (f"{self.firstname}  {self.lastname}")
+    
+
+class Comment(models.Model):
+    comment = models.TextField(max_length=1000)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+
+    def __str__(self):
+        return (f"{self.post} - - - - - - - - {self.comment}")
+    

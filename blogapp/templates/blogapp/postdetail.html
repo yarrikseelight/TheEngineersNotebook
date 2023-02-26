@@ -34,25 +34,17 @@
                     {% endif %}
                 </div>
 
-                <!--FOR I IN COMMENTS-->
-                <div class="comment">
+                {% for comment in comments %}
+                 <div class="comment">
                     <div class="written" id="comment_writer">
-                        <img id="pp" src={% static 'blogapp/django.jpg' %}>
-                        <p>{{post.author}}</p>
-                        <p  id="pvm">{{post.date}}</p>
+                        <img id="pp" src={% static 'defaultpp.jpg' %}>
+                        <p>{{comment.user}}</p>
+                        <p  id="pvm">{{comment.date}}</p>
                     </div>
-                <p class="comment_text">What a shitty text bro!</p>
+                <p class="comment_text">{{comment.comment}}</p>
                 </div>
-                <!--ENDFOR-->
+                {% endfor %}
 
-                <div class="comment">
-                    <div class="written" id="comment_writer">
-                        <img id="pp" src={% static 'blogapp/django.jpg' %}>
-                        <p>{{post.author}}</p>
-                        <p id="pvm">{{post.date}}</p>
-                    </div>
-                <p class="comment_text">Itse en tykännyt kyseisen tekstin sisällöstä vaikka aihe olikin sinäänsä mielenkiintoinen.</p>
-                </div>
             </div>
         </section>
     </div>

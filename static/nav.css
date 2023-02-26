@@ -1,9 +1,15 @@
-@media (max-width:600px) {
+@media (max-height:550px) {
   .logo img {
     display: none !important;
   }
 }
 
+
+@media (max-width:600px) {
+  .logo img {
+    display: none !important;
+  }
+}
 
 @media (max-width:850px) {
     .nav-links {
@@ -59,6 +65,7 @@
     width: 300px;
     height: auto;
     margin-left: 40px; 
+    max-height: 10vh;
   }
   
   
@@ -115,4 +122,3 @@
     font-size: 13px;
     margin: 12px;
  }
-
