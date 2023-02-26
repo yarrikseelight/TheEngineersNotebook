@@ -17,9 +17,17 @@ class IndexView(View):
         return render(request, "blogapp/frontpage.html", {"posts":posts})
     
 
+
 def posts(request):
     posts = Post.objects.order_by('-date')
     return render(request, "blogapp/posts.html", {"posts":posts})
+
+
+
+def about(request):
+    me = Author.objects.get(firstname="Jere")
+    return render(request, "blogapp/about.html", {"me":me})
+
 
 
 class PostDetailView(View):
@@ -47,9 +55,7 @@ class PostDetailView(View):
         return render(request, "blogapp/postdetail.html", {"post":post, "form":form, "comments":comments,})
     
 
-def about(request):
-    me = Author.objects.get(firstname="Jere")
-    return render(request, "blogapp/about.html", {"me":me})
+
 
 
 
