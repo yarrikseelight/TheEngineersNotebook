@@ -12,6 +12,7 @@ Built while learning the basics of Django in 2022-2023:
 
 
 ## 🐳 Docker Image
+⚠️ This Docker image is built for **development purposes only**.
 
 - Docker Hub: [jereseilo/engineersnotebook](https://hub.docker.com/repository/docker/jereseilo/engineersnotebook/general)
 - To build locally:
