@@ -13,7 +13,7 @@ Built while learning the basics of Django:
 
 ## 🐳 Docker Image
 
-- Docker Hub: [yourusername/yourproject](https://hub.docker.com/r/yourusername/yourproject)
+- Docker Hub: [jereseilo/engineersnotebook](https://hub.docker.com/repository/docker/jereseilo/engineersnotebook/general)
 - To build locally:
 
 ```bash
