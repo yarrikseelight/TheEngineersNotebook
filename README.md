@@ -1,6 +1,6 @@
 # 📝 The Engineers Notebook  
 
-Built while learning the basics of Django:  
+Built while learning the basics of Django in 2022-2023:  
 
 ✨ **Key Features**:  
 - 🖥️ **Views & URLs**: Dynamic routing with Django!  
