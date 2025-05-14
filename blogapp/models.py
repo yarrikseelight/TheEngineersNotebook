@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
-from datetime import date
+from django.utils import timezone
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -13,7 +13,7 @@ class Post(models.Model):
     intro = models.CharField(max_length=100)
     image = models.ImageField(upload_to="images")
     text = models.TextField()
-    date = models.DateField(default=date.today())
+    date = models.DateField(default=timezone.now)
     views = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
 
