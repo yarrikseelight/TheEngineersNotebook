@@ -12,12 +12,12 @@ Built while learning the basics of Django in 2022-2023:
 
 
 ## 🐳 Docker Image
-⚠️ This Docker image is built for **development purposes only**.
+⚠️ This Docker image is built for **development / demo purposes only**.
 
 - Docker Hub:
  [jereseilo/engineersnotebook](https://hub.docker.com/repository/docker/jereseilo/engineersnotebook/general)
 ```bash
-docker run -p 8000:8000 jereseilo/engineersnotebook:engineersnotebook
+docker run -p 8000:8000 jereseilo/engineersnotebook:demo
 ```
 
 - To build locally:
