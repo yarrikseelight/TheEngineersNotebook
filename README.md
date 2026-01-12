@@ -10,7 +10,7 @@ Built while learning the basics of Django in 2022-2023:
 - 💬 **Commenting System**: Engage with posts.
 - 🔧 **Django Admin Panel**: Manage blog posts, comments, and users easily!
 
-- ✨ **Key Things Learned**:  
+✨ **Key Things Learned**:  
 - 🐍 **Django Fundamentals**: Gained hands-on experience with a web development framework and learnt how Django uses MTV (model-template-view) architecture and how it handles different backend tasks. 
 - 🌐 **Web Development Basics**: Learnt basic flow of web application, including things such as requests, routing, datamodels, and dynamic templates.  
 - 🔐 **Authentication and Authorization**: Implemented user registration and login, and learnt how protected routes work as well as how authentication and authorization are implemented.  
